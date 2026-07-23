@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "mode": "precise",
+  "heuristic_notify_foreground": false
+}
