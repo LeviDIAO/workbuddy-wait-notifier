@@ -44,7 +44,7 @@ flowchart LR
     D -->|否| G[忽略]
 ```
 
-> 监听的是 `~/.workbuddy/projects/<项目>/<uuid>.jsonl`。
+> 监听的是 `~/.workbuddy/projects/<项目>/<uuid>.jsonl`（**本机实际路径**，不同环境可能不同）。
 > 精准模式下，触发条件是日志里出现 `type=="function_call"` 且 `name=="AskUserQuestion"` 的记录。
 
 ---
@@ -134,7 +134,7 @@ python workbuddy_wait_notifier.py --heuristic # 切到启发式模式并重启
 
 - Windows 系统（依赖 `ReadDirectoryChangesW` 与 Windows 通知/声音）。
 - 已安装 Python 3（无需任何第三方包）。
-- WorkBuddy 对话日志位于 `~/.workbuddy/projects/`（默认路径，无需配置）。
+- WorkBuddy 对话日志目录（**本机实测为** `~/.workbuddy/projects/`，不同安装/环境路径可能不同；脚本顶部 `WORKBUDDY_ROOT` / `PROJECTS_DIR` 常量可按需修改）。
 
 ---
 
